@@ -2,11 +2,20 @@ ORG 0x7c00
 BITS 16
 
 start:
-    mov ah, 0eh
-    mov al, 'A'
+    mov si, message
+    call print
+    jmp $
+
+print:
     mov bx, 0
+    loadsb
+    ret
+
+print_char:
+    mov ah, 0eh
     int 0x10
+    ret
 
-
+message: db 'Hello world!', 0
 times 510-($ - $$) db 0
 dw 0xAA55
