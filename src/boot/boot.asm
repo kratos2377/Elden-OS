@@ -8,7 +8,14 @@ start:
 
 print:
     mov bx, 0
+.loop
     loadsb
+    cmp al,0
+    je .done
+    call print_char
+    jmp .loop
+
+.done:
     ret
 
 print_char:
