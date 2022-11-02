@@ -130,7 +130,7 @@ user_programs_clean:
 	cd ./programs/blank && $(MAKE) clean
 	cd ./programs/shell && $(MAKE) clean
 
-clean: 
+clean: user_programs_clean
 	rm -rf ./bin/boot.bin
 	rm -rf ./bin/kernel.bin
 	rm -rf ./bin/os.bin
