@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/23961916/how-to-setup-i686-elf-cross-compiler-on-linux
